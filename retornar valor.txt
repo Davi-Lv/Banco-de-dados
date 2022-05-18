@@ -1,4 +1,4 @@
-1--retornar valor - Quantos alunos com a inicial desejada tem na tabela aluno.
+FUNCTION para Retornar valor - Quantos alunos com a inicial desejada tem na tabela aluno
 
 CREATE OR REPLACE FUNCTION return_valor(aluno varchar)
 RETURNs int
