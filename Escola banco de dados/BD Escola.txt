@@ -2,6 +2,7 @@ CREATE TABLE COORDENADOR(
 nome VARCHAR(60) NOT NULL,
 matricula INTEGER PRIMARY KEY
 );
+
 CREATE TABLE TURMA(
 num_sala INTEGER PRIMARY KEY,
 quantidade_alunos INTEGER,
@@ -9,6 +10,7 @@ grade_curricular VARCHAR(20) NOT NULL,
 matricula_coordenador INTEGER NOT NULL,
 FOREIGN KEY(matricula_coordenador) REFERENCES COORDENADOR(matricula)
 );
+
 CREATE TABLE ALUNO(
 nome VARCHAR(60) NOT NULL,
 matricula INTEGER PRIMARY KEY,
@@ -19,6 +21,7 @@ numeroDaCasa IntEGER,
 cidade varchar (50),
 FOREIGN KEY(num_salaAluno) REFERENCES TURMA (num_sala)
 );
+
 CREATE TABLE PROFESSOR(
 nome VARCHAR(60) NOT NULL,
 salario INTEGER NOT NULL,
@@ -28,6 +31,7 @@ matricula_coordenador INTEGER NOT NULL,
 FOREIGN KEY(matricula_coordenador) REFERENCES COORDENADOR(matricula),
 FOREIGN KEY (num_turma) REFERENCES TURMA(num_sala)
 );
+
 CREATE TABLE PROFESSOR_ALUNO(
 matricula_professor INTEGER NOT NULL,
 matricula_aluno INtEGER NOT NULL,
@@ -35,6 +39,7 @@ PRIMARY KEY(matricula_professor,matricula_aluno),
 FOREIGN KEY(matricula_professor) REFERENCES PROFESSOR(matricula),
 FOREIGN KEY(matricula_aluno) REFERENCES ALUNO(matricula)
 );
+
 CREATE TABLE TELEFONES(
 num_telefone VARCHAR(30) NOT NULL,
 num_coordenador INTEGER NOT NULL,
