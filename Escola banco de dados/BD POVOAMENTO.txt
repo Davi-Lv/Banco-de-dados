@@ -9,16 +9,16 @@ insert into COORDENADOR (nome,matricula)values('Mariane Barreto',8);
 insert into COORDENADOR (nome,matricula)values('Mikael Barbosa',9);
 insert into COORDENADOR (nome,matricula)values('Gustavo Silva',10);
 
-insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values (01,5,'Banco de dados',1);
-insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(02,5,'Estatística',2);
-insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(03,5,'Programação Web II',3);
-insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(04,5,'Estrutura de Dados',4);
-insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(05,5,'Inglês',5);
-insert into TURMA (num_sala,grade_curricular,matricula_coordenador)values(06,'Matemática discreta',6);
-insert into TURMA (num_sala,grade_curricular,matricula_coordenador)values(07,'Ética',7);
-insert into TURMA (num_sala,grade_curricular,matricula_coordenador)values(08,'Geometria Analítica',8);
-insert into TURMA (num_sala,grade_curricular,matricula_coordenador)values(09,'Literatura',9);
-insert into TURMA (num_sala,grade_curricular,matricula_coordenador)values(10,'Cálculo I',10);
+insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values (01,25,'Banco de dados',1);
+insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(02,20,'Estatística',2);
+insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(03,31,'Programação Web II',3);
+insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(04,28,'Estrutura de Dados',4);
+insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(05,30,'Inglês',5);
+insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(06,27,'Matemática discreta',6);
+insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(07,20,'Ética',7);
+insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(08,18,'Geometria Analítica',8);
+insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(09,29,'Literatura',9);
+insert into TURMA (num_sala,quantidade_alunos,grade_curricular,matricula_coordenador)values(10,27,'Cálculo I',10);
 
 
 insert into ALUNO (nome,matricula,num_salaaluno,data_de_nascimento,cep,numerodacasa,cidade) VALUES ('Túlio Eduardo',1000,01,'2003/08/27',54150190,36,'Jaboatao');
