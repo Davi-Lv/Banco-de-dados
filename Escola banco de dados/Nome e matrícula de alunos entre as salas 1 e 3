@@ -1,0 +1,10 @@
+/*
+Nome e matrícula de alunos entre as salas 1 e 3
+*/
+
+CREATE VIEW sala1_3 
+AS 
+SELECT nome, matricula 
+from ALUNO 
+where num_salaaluno 
+BETWEEN 1 and 3 
