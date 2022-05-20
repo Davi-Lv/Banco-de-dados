@@ -1,10 +1,15 @@
-/*
-Nome e matrícula de alunos entre as salas 1 e 3
-*/
+--Nome e matrícula de alunos entre as salas 1 e 3
 
-CREATE VIEW sala1_3 
-AS 
+
+--criei a VIEW com o nome 'sala1_3'
+CREATE VIEW sala1_3 AS 
+
+--dentro da VIEW dei um SELECT nas colunas 'nome' e 'matricula' da tabela 'ALUNO'
 SELECT nome, matricula 
 from ALUNO 
+
+--especifiquei com a clausula WHERE o 'num_salaaluno'
 where num_salaaluno 
+
+--e botei o BETWEEN para dar um range de um valor para outro, no caso, usei de 1 a 3
 BETWEEN 1 and 3 
