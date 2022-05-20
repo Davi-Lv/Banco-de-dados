@@ -1,0 +1,8 @@
+--Nome, matrícula e número de sala de alunos com idade entre 18 e 30 anos
+
+
+CREATE VIEW info_alunos 
+as 
+select nome, matricula, num_salaaluno 
+from ALUNO 
+where data_de_nascimento >= '1990/01/01' AND data_de_nascimento < '2004/01/01'
