@@ -1,8 +1,11 @@
 --Nome, matrícula e número de sala de alunos com idade entre 18 e 30 anos
 
+--criei a view com o nome 'info_alunos'
+CREATE VIEW info_alunos as 
 
-CREATE VIEW info_alunos 
-as 
+--selecionei as colunas 'nome', 'matricula' e 'num_salaaluno da tabela 'ALUNO'
 select nome, matricula, num_salaaluno 
 from ALUNO 
+
+--especifiquei para aparecer apenas alunos com o tempo desejado (de 1990 até 2004)
 where data_de_nascimento >= '1990/01/01' AND data_de_nascimento < '2004/01/01'
