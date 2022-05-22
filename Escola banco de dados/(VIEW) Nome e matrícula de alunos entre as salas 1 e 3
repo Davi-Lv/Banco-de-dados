@@ -11,5 +11,5 @@ from ALUNO
 --especifiquei com a clausula WHERE o 'num_salaaluno'
 where num_salaaluno 
 
---e botei o BETWEEN para dar um range de um valor para outro, no caso, usei de 1 a 3
+--e por fim, um BETWEEN para dar um range de um valor para outro, no caso, usei de 1 a 3
 BETWEEN 1 and 3 
