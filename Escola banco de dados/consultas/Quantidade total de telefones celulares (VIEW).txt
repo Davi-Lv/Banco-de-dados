@@ -1,0 +1,12 @@
+--VIEW - A quantidade total de telefones celulares no banco de dados
+
+--criei a VIEW com o nome 'numero_telefones'
+CREATE view numero_telefones as 
+
+--selecionei com o COUNT a coluna 'num_telefone' 
+SELECT count(num_telefone)  
+
+--selecionei a tabela 'telefones' 
+from telefones
+
+--com isso, o valor de todos os telefones disponíveis no banco de dados sera retornado
