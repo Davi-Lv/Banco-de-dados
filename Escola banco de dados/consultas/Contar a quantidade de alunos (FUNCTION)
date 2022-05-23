@@ -1,0 +1,29 @@
+--FUNCTION para Contar a quantidade de alunos
+
+
+--criei uma FUNCTION com o OR REPLACE para subscrever a FUNCTION com o mesmo nome pelo codigo atual. o nome da FUNCTION é 'contagem'
+CREATE OR REPLACE FUNCTION contagem ()
+
+--RETURNS INTEGER para retornar uma resposta numerica
+RETURNS integer AS $$
+
+--declarei uma variavel com o nome 'total' do tipo INTEGER
+declare
+	total integer;
+  
+/*begin para começar a transação. dentro dele usei um select com um COUNT para contar e selecionar as tabelas e selecionei a variavel 'total' 
+e selecionei a tabela 'aluno'. o INTO no 'total' para uma tabela externa e selecionar a variavel do DECLARE */
+BEGIN
+   SELECT count(*) into total FROM aluno;
+
+--dei um RETURN na coluna 'total' para retorna a resposta
+   RETURN total;
+   
+--finalizei o bigin
+END;
+
+--especifiquei a linguagem para PlpgSQL
+$$ LANGUAGE plpgsql;
+
+--chamei a function
+SELECT contagem();
