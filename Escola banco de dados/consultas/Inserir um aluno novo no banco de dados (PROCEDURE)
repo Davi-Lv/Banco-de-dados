@@ -3,7 +3,7 @@
 --criei um procedimento com o nome 'insert_aluno' e coloquei um OR REPLACE para caso aja um procedimento com este nome, substituir ele pelo atual
 CREATE OR REPLECE PROCEDURE insert_aluno (
 
---dentro do PROCEDURE 
+--dentro do PROCEDURE declarei o tipo que ele vai receber, o 'nome' do tipo caracteres, a 'matricula' do tipo numerico, e assim por diante
 nome CHARACTER VARYING, matricula NUMERIC, num_salaaluno NUMERIC, data_de_nascimento DATE, cep NUMERIC, numerodacasa NUMERIC, cidade CHARACTER VARYING)
 
 --coloquei a linguagem do tipo PlpgsSQL
