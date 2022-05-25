@@ -1,0 +1,22 @@
+--PROCEDIMENTO - Inserir um aluno novo no banco de dados
+
+--criei um procedimento com o nome 'insert_aluno' e coloquei um OR REPLACE para caso aja um procedimento com este nome, substituir ele pelo atual
+CREATE OR REPLECE PROCEDURE insert_aluno (
+
+--dentro do PROCEDURE 
+nome CHARACTER VARYING, matricula NUMERIC, num_salaaluno NUMERIC, data_de_nascimento DATE, cep NUMERIC, numerodacasa NUMERIC, cidade CHARACTER VARYING)
+
+--coloquei a linguagem do tipo PlpgsSQL
+LANGUAGE 'plpgsql' As $$
+
+--dentro do começo BEGIN coloquei o INSERT para adiciona um aluno e coloquei para adicionar dentro dos valores da tabela 'nome','matricula', etc... 
+BEGIN
+INSERT into aluno(nome,matricula,num_salaaluno,data_de_nascimento,cep,numerodacasa,cidade) VALUES($1,$2,$3,$4,$5,$6,$7);
+
+--e para finalizar o bloco de transação do BEGIN, uso o COMMIT e finaliznado o procedimento com o END
+COMMIT;
+END;
+$$;
+
+--chamando o PROCEDURE e adicionando o aluno com os valores $1 = 'Josefino' que é o 'nome' na table, $2 = '1031,1' que é a 'matricula' da tabela, e assim por diante
+CALL insert_aluno('Josefino',1031,1,'2001-01-08',55360864,1,'Recife');
