@@ -1,0 +1,23 @@
+--retornar uma tabela sem parâmetros - tabela com o professor e a materia dele de acordo com a matricula
+
+
+--criei uma FUNCTION chamada 'return_table' que ira receber um parametro INTEGER
+CREATE OR REPLACE FUNCTION return_table(aluno int)
+
+--selecionei a reposta que vai retornar que vai ser uma STRING(texto)
+RETURNs varchar as $$
+
+--comecei um begin e retornei dentro dele uma SELECT a resposta da FUNCTION
+BEGIN
+	return (
+  
+  /*no SELECT coloquei as colunas 'nome' e 'grade_curricular', renomeei eles com o AS e selecionei com o FROM o tabela 'coordenador' renomeado para 'c' e usei o INNER JOIN
+  para fazer a junção de duas tabelas. comparei o 'c.matricula' que é a coluna 'matricula' da tabela 'coordenador' junto com o 't.matricula_coordenador' que é a tabela 
+  'turma' na coluna 'matricula_coordenador' e com isso, cada linha da tabela de 'matricula' for igual ao do 'matricula_coordenador', vai me retornar o professor 
+  juntamente com a materia dele certinho*/
+  SELECT nome as professor, grade_curricular as materia
+            from coordenador as c INNER join turma as t
+            on c.matricula = t.matricula_coordenador);
+            
+--finaliznado a FUNCTION e colocando o tipo de linguagem dela
+end; $$ LANGUAGE plpgsql;
